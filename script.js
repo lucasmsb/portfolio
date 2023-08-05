@@ -32,54 +32,52 @@ function menuMobol(){
 
 
 function sobreMim(){
+    const experiencia = document.querySelectorAll('.experience_content div');
+    const botao = document.querySelectorAll('.experience_content ul li')
+    const education = document.querySelectorAll('.education_content div');
+    const botaoEducation = document.querySelectorAll('.education_content ul li')
 
-    const divExperiencia = document.querySelectorAll('.experience_content div');
-    const liExperiencia = document.querySelectorAll('.experience_content ul li');
-    const divEducation = document.querySelectorAll('.education_content div');
-    const liEducation = document.querySelectorAll('.education_content ul li');
 
-    divExperiencia[0].classList.add('ativo')
-    divEducation[0].classList.add('ativo')
-    liExperiencia[0].classList.add('ativo')
-    liEducation[0].classList.add('ativo')
+    experiencia[0].classList.add('ativo')
+    botao[0].classList.add('ativo')
+    education[0].classList.add('ativo')
+    botaoEducation[0].classList.add('ativo')
 
     function slideShow(index){
-        divExperiencia.forEach((div)=>{
-            div.classList.remove('ativo');
+        experiencia.forEach((divisao)=>{
+            divisao.classList.remove('ativo');
         });
-        liExperiencia.forEach((botao)=>{
-            botao.classList.remove('ativo');
-        })
-        divExperiencia[index].classList.add('ativo');
-        liExperiencia[index].classList.add('ativo');
+        botao.forEach((item)=>{
+            item.classList.remove('ativo')
+        });
+        experiencia[index].classList.add('ativo')
+        botao[index].classList.add('ativo')
     }
 
     function slideShow2(index){
-        divEducation.forEach((div)=>{
-            div.classList.remove('ativo');
+        education.forEach((divisao)=>{
+            divisao.classList.remove('ativo');
         });
-        liEducation.forEach((botao)=>{
-            botao.classList.remove('ativo');
-        })
-        divEducation[index].classList.add('ativo');
-        liEducation[index].classList.add('ativo');
+        botaoEducation.forEach((item)=>{
+            item.classList.remove('ativo')
+        });
+        education[index].classList.add('ativo')
+        botaoEducation[index].classList.add('ativo')
     }
 
 
-    liExperiencia.forEach((event,index)=>{
+    botao.forEach((event,index)=>{
         event.addEventListener('click', ()=>{
             slideShow(index)
         });
     });
 
-    liEducation.forEach((event,index)=>{
-        event.addEventListener('click', ()=>{
+    botaoEducation.forEach((div, index)=>{
+        div.addEventListener('click', ()=>{
             slideShow2(index)
-        });
-    });
-
+        })
+    })
 }
-
-
 sobreMim();
+
 
