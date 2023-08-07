@@ -13,6 +13,8 @@ function escrevendoLetra(){
     ativaLetra(titulo);
 } 
 
+escrevendoLetra ()
+
 function ativacaoMenu(){
     const ativaMenu = document.querySelector('.fa-bars');
     const navMenu = document.querySelector('header .navegacao-primaria')
